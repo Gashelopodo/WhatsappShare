@@ -6,14 +6,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="20dp">
+        android:paddingTop="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Escriba su comentario:"
             android:id="@+id/myTitleCustom"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             />
         <EditText
@@ -29,6 +31,7 @@
             android:layout_height="50dp" android:layout_below="@+id/myCustomText"
             android:src="@drawable/icon"
             android:scaleType="fitCenter"
+            android:id="@+id/myImageButton"
             />
 
     </RelativeLayout>

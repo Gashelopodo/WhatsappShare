@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 /**
  * Created by Gashe on 17/3/17.
@@ -19,6 +20,12 @@ public class FragmentListComments extends Fragment {
 
         View view = null;
         view = inflater.inflate(R.layout.fragment_list_comments, container, false);
+
+        Utils utils = new Utils();
+        utils.getComments(getContext());
+
+        ListView listView = (ListView)view.findViewById(R.id.myListView);
+        //ListViewAdapter adapter = new ListViewAdapter
 
         return view;
 

@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 /**
  * Created by Gashe on 17/3/17.
@@ -19,6 +20,9 @@ public class FragmentWriteComment extends Fragment {
 
         View view = null;
         view = inflater.inflate(R.layout.fragment_write_comment, container, false);
+
+        ImageButton imageButton = (ImageButton)view.findViewById(R.id.myImageButton);
+        imageButton.setOnClickListener(new ListenerButton());
 
         return view;
     }
