@@ -28,7 +28,8 @@
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="50dp" android:layout_below="@+id/myCustomText"
+            android:layout_height="50dp"
+            android:layout_below="@+id/myCustomText"
             android:src="@drawable/icon"
             android:scaleType="fitCenter"
             android:id="@+id/myImageButton"

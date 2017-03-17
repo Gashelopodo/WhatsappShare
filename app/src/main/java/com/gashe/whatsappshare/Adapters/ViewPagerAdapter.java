@@ -1,8 +1,11 @@
-package com.gashe.whatsappshare;
+package com.gashe.whatsappshare.Adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.gashe.whatsappshare.Fragments.FragmentListComments;
+import com.gashe.whatsappshare.Fragments.FragmentWriteComment;
 
 /**
  * Created by Gashe on 17/3/17.

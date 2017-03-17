@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.gashe.whatsappshare.MainActivity">
+    tools:context="com.gashe.whatsappshare.Activities.MainActivity">
 
 
     <android.support.design.widget.TabLayout

@@ -1,4 +1,4 @@
-package com.gashe.whatsappshare;
+package com.gashe.whatsappshare.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
+import com.gashe.whatsappshare.Adapters.ListViewAdapter;
+import com.gashe.whatsappshare.R;
+import com.gashe.whatsappshare.Utils.Utils;
 
 /**
  * Created by Gashe on 17/3/17.
@@ -21,11 +25,13 @@ public class FragmentListComments extends Fragment {
         View view = null;
         view = inflater.inflate(R.layout.fragment_list_comments, container, false);
 
+        String[] comments;
         Utils utils = new Utils();
-        utils.getComments(getContext());
+        comments = utils.getComments(getContext());
 
         ListView listView = (ListView)view.findViewById(R.id.myListView);
-        //ListViewAdapter adapter = new ListViewAdapter
+        ListViewAdapter adapter = new ListViewAdapter(comments, getContext());
+        listView.setAdapter(adapter);
 
         return view;
 
