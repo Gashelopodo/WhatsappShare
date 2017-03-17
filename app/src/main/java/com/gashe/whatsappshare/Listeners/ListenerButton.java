@@ -2,6 +2,7 @@ package com.gashe.whatsappshare.Listeners;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -30,14 +31,17 @@ public class ListenerButton implements View.OnClickListener {
 
                 Activity activity = (Activity)context;
                 FragmentActivity fm = (FragmentActivity)context;
-
                 EditText editText = (EditText) activity.findViewById(R.id.myCustomText);
+                String text = editText.getText().toString();
+
                 Utils utils = new Utils();
-                utils.saveComment(editText.getText().toString(), context);
+                utils.saveComment(text, context);
                 editText.setText("");
 
                 ViewPager viewPager = utils.createViewPagerAndTabs(context, fm.getSupportFragmentManager());
                 viewPager.setCurrentItem(2);
+
+                utils.sendWhatsapp(context, text);
 
                 break;
             default: //nada

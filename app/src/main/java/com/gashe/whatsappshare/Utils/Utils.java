@@ -2,6 +2,7 @@ package com.gashe.whatsappshare.Utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
@@ -63,6 +64,17 @@ public class Utils {
         tabLayout.getTabAt(1).setIcon(R.drawable.list);
 
         return viewPager;
+
+    }
+
+    public void sendWhatsapp(Context context, String text){
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, text);
+        sendIntent.setType("text/plain");
+        sendIntent.setPackage("com.whatsapp");
+        context.startActivity(sendIntent);
 
     }
 
