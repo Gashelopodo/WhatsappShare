@@ -35,7 +35,7 @@ public class Utils {
     public String[] getComments(Context context){
 
         final SharedPreferences prefs = context.getSharedPreferences("prefs", Context.MODE_PRIVATE);
-        int length = prefs.getInt("total", 0);
+        int length = prefs.getInt("total", -1);
         String[] comments = new String[length+1];
 
         for(int i = 0; i <= length; i++){
